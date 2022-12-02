@@ -12,7 +12,7 @@ router.get("/", function (req, res) {
 router.post("/", function (req, res) {
 	const { body } = req;
 	Comment.insert(body).then(function (comment) {
-		res.json(comment);
+		res.json(body);
 	});
 });
 
