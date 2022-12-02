@@ -1,0 +1,15 @@
+<form method="post" action="/comments">
+	<label for="author">Autor:</label>
+	<input type="text" id="author" name="author" />
+	<label for="comment">Comment</label>
+	<input type="text" id="comment" name="comment" />
+	<button type="submit">Enviar</button>
+</form>
+<ul>
+	{{#each comments}}
+		<li>
+			<p><b>{{this.author}}</b>: {{this.comment}}</p>
+			<p><b>post</b>: {{this.post_id}}</p>
+		</li>
+	{{/each}}
+</ul>
